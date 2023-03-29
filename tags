@@ -1,0 +1,228 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ARDStruct	boot/loader.asm	/^ARDStruct		equ	LOAD_PHY_ADDR + _ARDStruct$/;"	d
+AR_FLAGS	Makefile	/^AR_FLAGS	= rcs$/;"	m
+ASM	Makefile	/^ASM		= nasm$/;"	m
+ASM_BFLAGS	Makefile	/^ASM_BFLAGS	= -I boot\/$/;"	m
+ASM_KFLAGS	Makefile	/^ASM_KFLAGS	= -I include\/ -f elf$/;"	m
+BaseAddrHigh	boot/loader.asm	/^	BaseAddrHigh	equ	LOAD_PHY_ADDR + _BaseAddrHigh$/;"	d
+BaseAddrLow	boot/loader.asm	/^	BaseAddrLow	equ	LOAD_PHY_ADDR + _BaseAddrLow$/;"	d
+CC	Makefile	/^CC		= gcc$/;"	m
+C_FLAGS	Makefile	/^C_FLAGS		= -I include\/ -c -fno-builtin -Wall$/;"	m
+DispMemInfo	boot/loader.asm	/^DispMemInfo:$/;"	l
+GDTD_FLAT_C	boot/loader.asm	/^GDTD_FLAT_C:	Descriptor	0x0,	0xfffff,DAC_ER | DA_32s | DA_LIMIT_4K	; 0 ~ 4G$/;"	l
+GDTD_FLAT_RW	boot/loader.asm	/^GDTD_FLAT_RW:	Descriptor	0x0,	0xfffff,DAD_RW | DA_32s | DA_LIMIT_4K	; 0 ~ 4G$/;"	l
+GDTD_VIDEO	boot/loader.asm	/^GDTD_VIDEO:	Descriptor	0xB8000,0xffff,	DAD_RW | DA_DPL3		; Grapic RAM$/;"	l
+GDT_NULL	boot/loader.asm	/^GDT_NULL:	Descriptor	0,	0,	0				$/;"	l
+GDT_len	boot/loader.asm	/^GDT_len		equ	$ - GDT_NULL$/;"	d
+GDT_ptr	boot/loader.asm	/^GDT_ptr		dw	GDT_len - 1	$/;"	d
+IBEAN_BOOT	Makefile	/^IBEAN_BOOT	= boot\/boot.bin boot\/loader.bin$/;"	m
+IBEAN_KERNEL	Makefile	/^IBEAN_KERNEL	= kernel.bin$/;"	m
+KENTER_ADDR	Makefile	/^KENTER_ADDR	= 0x30400$/;"	m
+KOBJS	Makefile	/^KOBJS		= kernel\/kernel_asm.o kernel\/kernel_c.o \\$/;"	m
+LABEL_DATA	boot/loader.asm	/^LABEL_DATA:$/;"	l
+LD	Makefile	/^LD		= ld$/;"	m
+LD_FLAGS	Makefile	/^LD_FLAGS	= -s -Ttext $(KENTER_ADDR) -Map kmap$/;"	m
+LengthHigh	boot/loader.asm	/^	LengthHigh	equ	LOAD_PHY_ADDR + _LengthHigh$/;"	d
+LengthLow	boot/loader.asm	/^	LengthLow	equ	LOAD_PHY_ADDR + _LengthLow$/;"	d
+MCRNumber	boot/loader.asm	/^MCRNumber		equ	LOAD_PHY_ADDR + _MCRNumber$/;"	d
+MemChkBuf	boot/loader.asm	/^MemChkBuf		equ	LOAD_PHY_ADDR + _MemChkBuf$/;"	d
+MemChkTitle	boot/loader.asm	/^MemChkTitle		equ	LOAD_PHY_ADDR + _MemChkTitle$/;"	d
+MemSize	boot/loader.asm	/^MemSize			equ	LOAD_PHY_ADDR + _MemSize$/;"	d
+RAMSize	boot/loader.asm	/^RAMSize			equ	LOAD_PHY_ADDR + _RAMSize$/;"	d
+Return	boot/loader.asm	/^Return			equ	LOAD_PHY_ADDR + _Return$/;"	d
+STR_DEFAULT_LEN	lib/klib.c	8;"	d	file:
+StackSpace	boot/loader.asm	/^StackSpace:	times	1000h	db	0$/;"	l
+TopOfStack	boot/loader.asm	/^TopOfStack	equ	LOAD_PHY_ADDR + $	; Top of the Stack$/;"	d
+Type	boot/loader.asm	/^	Type		equ	LOAD_PHY_ADDR + _Type$/;"	d
+VRAM_END	boot/loader.asm	/^VRAM_END	equ	0x1ff0$/;"	d
+_ARDStruct	boot/loader.asm	/^_ARDStruct:					; Address Range Descriptor Structure$/;"	l
+_BaseAddrHigh	boot/loader.asm	/^	_BaseAddrHigh:		dd	0$/;"	d
+_BaseAddrLow	boot/loader.asm	/^	_BaseAddrLow:		dd	0$/;"	d
+_KERNEL_H_	include/kernel.h	6;"	d
+_KLIB_H_	include/klib.h	8;"	d
+_LengthHigh	boot/loader.asm	/^	_LengthHigh:		dd	0$/;"	d
+_LengthLow	boot/loader.asm	/^	_LengthLow:		dd	0$/;"	d
+_MCRNumber	boot/loader.asm	/^_MCRNumber:			dd	0	; Memory Check Result$/;"	d
+_MemChkBuf	boot/loader.asm	/^_MemChkBuf:	times	256	db	0$/;"	l
+_MemChkTitle	boot/loader.asm	/^_MemChkTitle:			db	"BaseAddrL  BaseAddrH  LengthLow  LengthHigh Type", 0xa, 0$/;"	d
+_MemSize	boot/loader.asm	/^_MemSize:			dd	0$/;"	d
+_RAMSize	boot/loader.asm	/^_RAMSize:			db	"RAM size:", 0$/;"	d
+_Return	boot/loader.asm	/^_Return:			db	0xa, 0$/;"	d
+_TYPE_H_	include/type.h	7;"	d
+_Type	boot/loader.asm	/^	_Type:			dd	0$/;"	d
+_ccolor	boot/loader.asm	/^_ccolor		dw	0x0f00$/;"	d
+_charidx	boot/loader.asm	/^_charidx	db	"0123456789ABCDEF", 0$/;"	d
+_endspace	boot/loader.asm	/^_endspace	db	"h  ", 0x0$/;"	d
+_hexbuf4	boot/loader.asm	/^_hexbuf4	dq	0, 0$/;"	d
+_pm_msg_author	boot/loader.asm	/^_pm_msg_author	db	"                              design by T.G. Yang [ 2012 - 2013 ]", 0xa, 0$/;"	d
+_pm_msg_initk	boot/loader.asm	/^_pm_msg_initk	db	"Init the Kernel......", 0xa, 0$/;"	d
+_pm_msg_meminfo	boot/loader.asm	/^_pm_msg_meminfo	db	"Display the memory layout.", 0xa, 0$/;"	d
+_pm_msg_setpage	boot/loader.asm	/^_pm_msg_setpage	db	"Setup the Paging.....", 0xa, 0$/;"	d
+_pm_msg_title	boot/loader.asm	/^_pm_msg_title	db	"123Now in Protected mode.", 0xa, 0$/;"	d
+_pm_msg_welcome	boot/loader.asm	/^_pm_msg_welcome	db	"                      Welcome to iBean OS Kernel!", 0xa, 0$/;"	d
+_start	kernel/kernel.asm	/^_start:$/;"	l
+_vrampos	boot/loader.asm	/^_vrampos	dd	0$/;"	d
+add	boot/loader.asm	/^add	eax, KFILE_OFFSET$/;"	l
+ards	include/kernel.h	/^struct ards{$/;"	s
+base_addr_high	include/kernel.h	/^	u32 base_addr_high;	\/\/base address high 32 bits$/;"	m	struct:ards
+base_addr_low	include/kernel.h	/^	u32 base_addr_low;	\/\/base address low 32 bits$/;"	m	struct:ards
+boot_start	boot/boot.asm	/^boot_start:$/;"	l
+call	boot/loader.asm	/^call	DispMemInfo$/;"	l
+call	boot/loader.asm	/^call	clrsrc$/;"	l
+call	boot/loader.asm	/^call	init_kernel$/;"	l
+call	boot/loader.asm	/^call	newline$/;"	l
+call	boot/loader.asm	/^call	pm_puts$/;"	l
+call	boot/loader.asm	/^call	setcolor $/;"	l
+call	boot/loader.asm	/^call	setcolor$/;"	l
+call	boot/loader.asm	/^call	setup_paging$/;"	l
+call	boot/loader.asm	/^call memcpy$/;"	l
+ccolor	boot/loader.asm	/^ccolor		equ	LOAD_PHY_ADDR + _ccolor$/;"	d
+charidx	boot/loader.asm	/^charidx		equ	LOAD_PHY_ADDR + _charidx$/;"	d
+clrsrc	boot/boot.asm	/^clrsrc:$/;"	l
+clrsrc	boot/loader.asm	/^clrsrc:$/;"	l
+cylind_ch	boot/boot.asm	/^cylind_ch	db	0$/;"	d
+cylind_ch	boot/loader.asm	/^cylind_ch	db	0$/;"	d
+dec	boot/boot.asm	/^	dec	dx$/;"	d
+dec	boot/loader.asm	/^	dec	dx					$/;"	d
+disp_pos	kernel/kernel.c	/^int disp_pos;$/;"	v
+disp_str	lib/klib.asm	/^disp_str:$/;"	l
+do_puts_done	boot/boot.asm	/^do_puts_done:	$/;"	l
+do_puts_loop	boot/boot.asm	/^do_puts_loop:	$/;"	l
+dw	boot/boot.asm	/^dw 	0xaa55			; End sign, littel end$/;"	l
+endspace	boot/loader.asm	/^endspace	equ	LOAD_PHY_ADDR + _endspace$/;"	d
+extern	kernel/kernel.asm	/^extern kinit$/;"	l
+extern	lib/klib.asm	/^extern	disp_pos$/;"	l
+file_name	boot/boot.asm	/^file_name	db	"LOADER  BIN", 0	;file name$/;"	d
+get_cur_col	boot/loader.asm	/^get_cur_col:$/;"	l
+get_fat_entry	boot/boot.asm	/^get_fat_entry:$/;"	l
+get_fat_entry	boot/loader.asm	/^get_fat_entry:$/;"	l
+get_mem_info	boot/loader.asm	/^get_mem_info:$/;"	l
+global	kernel/kernel.asm	/^global	_start$/;"	l
+global	lib/klib.asm	/^global	disp_str$/;"	l
+global	lib/klib.asm	/^global memcpy$/;"	l
+global	lib/klib.asm	/^global memset$/;"	l
+global	lib/klib.asm	/^global strcpy$/;"	l
+global	lib/klib.asm	/^global strlen$/;"	l
+header_dh	boot/boot.asm	/^header_dh	db	0$/;"	d
+header_dh	boot/loader.asm	/^header_dh	db	0$/;"	d
+hex2char	boot/loader.asm	/^hex2char:$/;"	l
+hex2str4	boot/loader.asm	/^hex2str4:$/;"	l
+hexbuf4	boot/loader.asm	/^hexbuf4		equ	LOAD_PHY_ADDR + _hexbuf4$/;"	d
+i2a	lib/klib.c	/^static char *i2a( int val, int base, char **ps )$/;"	f	file:
+inc	boot/boot.asm	/^	inc	di$/;"	d
+inc	boot/loader.asm	/^	inc	di$/;"	d
+init_kernel	boot/loader.asm	/^init_kernel:$/;"	l
+is_odd	boot/boot.asm	/^is_odd		db	0			;odd or even , odd : 1 even : 0$/;"	d
+is_odd	boot/loader.asm	/^is_odd		db	0		$/;"	d
+jmp	boot/boot.asm	/^jmp	short boot_start$/;"	l
+jmp	boot/loader.asm	/^jmp	sel_faltc:KERNEL_PHY_ENTER$/;"	l
+jmp	boot/loader.asm	/^jmp stage_a_start$/;"	l
+kernel_size	boot/loader.asm	/^kernel_size	dd	0		$/;"	d
+kfile_name	boot/loader.asm	/^kfile_name	db	"KERNEL  BIN", 0	$/;"	d
+kill_motor	boot/loader.asm	/^kill_motor:$/;"	l
+kinit	kernel/kernel.c	/^void kinit( void )$/;"	f
+kstack_top	kernel/kernel.asm	/^kstack_top:$/;"	l
+label_pm_start	boot/loader.asm	/^label_pm_start:$/;"	l
+length_high	include/kernel.h	/^	u32 length_high;	\/\/length ( bytes ) high 32 bits$/;"	m	struct:ards
+length_low	include/kernel.h	/^	u32 length_low;		\/\/length ( bytes ) low 32 bits$/;"	m	struct:ards
+load_file	boot/boot.asm	/^load_file:		$/;"	l
+load_kernel_file	boot/loader.asm	/^load_kernel_file:$/;"	l
+memcpy	boot/loader.asm	/^memcpy:$/;"	l
+memcpy	lib/klib.asm	/^memcpy:$/;"	l
+memset	lib/klib.asm	/^memset:$/;"	l
+mov	boot/loader.asm	/^mov	[BOOT_PARAM_ADDR+4], eax	;memory size$/;"	l
+mov	boot/loader.asm	/^mov	[BOOT_PARAM_ADDR+8], eax	;phy-addr of kernel.bin$/;"	l
+mov	boot/loader.asm	/^mov	ah, COLOR_BLACK$/;"	l
+mov	boot/loader.asm	/^mov	al, COLOR_GREEN$/;"	l
+mov	boot/loader.asm	/^mov	al, COLOR_YELLOW$/;"	l
+mov	boot/loader.asm	/^mov	ax, sel_faltrw$/;"	l
+mov	boot/loader.asm	/^mov	ax, sel_video$/;"	l
+mov	boot/loader.asm	/^mov	ds, ax$/;"	l
+mov	boot/loader.asm	/^mov	dword [BOOT_PARAM_ADDR], BOOT_PARAM_MAGIC$/;"	l
+mov	boot/loader.asm	/^mov	eax, KFILE_SEG$/;"	l
+mov	boot/loader.asm	/^mov	eax, [MemSize]$/;"	l
+mov	boot/loader.asm	/^mov	es, ax$/;"	l
+mov	boot/loader.asm	/^mov	esi, MemChkTitle$/;"	l
+mov	boot/loader.asm	/^mov	esi, pm_msg_author$/;"	l
+mov	boot/loader.asm	/^mov	esi, pm_msg_initk$/;"	l
+mov	boot/loader.asm	/^mov	esi, pm_msg_meminfo$/;"	l
+mov	boot/loader.asm	/^mov	esi, pm_msg_setpage$/;"	l
+mov	boot/loader.asm	/^mov	esi, pm_msg_welcome$/;"	l
+mov	boot/loader.asm	/^mov	esp, TopOfStack$/;"	l
+mov	boot/loader.asm	/^mov	fs, ax$/;"	l
+mov	boot/loader.asm	/^mov	gs, ax$/;"	l
+mov	boot/loader.asm	/^mov	ss, ax$/;"	l
+mov	boot/loader.asm	/^mov dword [0x920], eax$/;"	l
+mov	boot/loader.asm	/^mov eax, 0x930$/;"	l
+mov	boot/loader.asm	/^mov eax, 256$/;"	l
+mov	boot/loader.asm	/^mov eax, MemChkBuf$/;"	l
+mov	boot/loader.asm	/^mov eax, dword [MCRNumber]$/;"	l
+msg_booting	boot/boot.asm	/^msg_booting	db	"Booting", 0$/;"	d
+msg_failed	boot/boot.asm	/^msg_failed	db	" FAILED!", 0xa, 0$/;"	d
+msg_failed	boot/loader.asm	/^msg_failed	db	"Failed! There is no kernel.bin in disk.", 0xa, 0$/;"	d
+msg_loading	boot/loader.asm	/^msg_loading	db	0xd, "Loading", 0$/;"	d
+msg_point	boot/boot.asm	/^msg_point	db	".", 0$/;"	d
+msg_point	boot/loader.asm	/^msg_point	db	".", 0$/;"	d
+msg_ready	boot/boot.asm	/^msg_ready	db	" DONE!", 0xa, 0$/;"	d
+msg_ready	boot/loader.asm	/^msg_ready	db	" DONE!", 0xa, 0$/;"	d
+newline	boot/loader.asm	/^newline:$/;"	l
+nop	boot/boot.asm	/^nop$/;"	l
+org	boot/boot.asm	/^org		0x7c00$/;"	l
+org	boot/loader.asm	/^org 0x100$/;"	l
+pm_msg_author	boot/loader.asm	/^pm_msg_author	equ	LOAD_PHY_ADDR + _pm_msg_author$/;"	d
+pm_msg_initk	boot/loader.asm	/^pm_msg_initk	equ	LOAD_PHY_ADDR + _pm_msg_initk$/;"	d
+pm_msg_meminfo	boot/loader.asm	/^pm_msg_meminfo	equ	LOAD_PHY_ADDR + _pm_msg_meminfo$/;"	d
+pm_msg_setpage	boot/loader.asm	/^pm_msg_setpage	equ	LOAD_PHY_ADDR + _pm_msg_setpage$/;"	d
+pm_msg_title	boot/loader.asm	/^pm_msg_title	equ	LOAD_PHY_ADDR + _pm_msg_title$/;"	d
+pm_msg_welcome	boot/loader.asm	/^pm_msg_welcome	equ	LOAD_PHY_ADDR + _pm_msg_welcome$/;"	d
+pm_putchar	boot/loader.asm	/^pm_putchar:$/;"	l
+pm_puts	boot/loader.asm	/^pm_puts:$/;"	l
+pop	boot/boot.asm	/^	pop	dx$/;"	d
+pop	boot/loader.asm	/^	pop	dx$/;"	d
+print_hex4	boot/loader.asm	/^print_hex4:$/;"	l
+printf	lib/klib.c	/^int printf( char *fmt, ... )$/;"	f
+push	boot/boot.asm	/^	push	dx$/;"	d
+push	boot/loader.asm	/^	push	dx$/;"	d
+push	boot/loader.asm	/^push eax$/;"	l
+puts	boot/boot.asm	/^puts:$/;"	l
+puts	boot/loader.asm	/^puts:$/;"	l
+rds_idx	boot/boot.asm	/^rds_idx		dw	ROOT_DIR_SECTORS	$/;"	d
+read_sector	boot/boot.asm	/^read_sector:	$/;"	l
+read_sector	boot/loader.asm	/^read_sector:	$/;"	l
+ret	boot/loader.asm	/^ret$/;"	l
+search_file	boot/boot.asm	/^search_file:$/;"	l
+sect_cnt	boot/boot.asm	/^sect_cnt	dw	0			;Sector number$/;"	d
+sector_cl	boot/boot.asm	/^sector_cl	db	0$/;"	d
+sector_cl	boot/loader.asm	/^sector_cl	db	0$/;"	d
+sector_cnt	boot/loader.asm	/^sector_cnt	dw	ROOT_DIR_SECTORS	$/;"	d
+sectors_rd	boot/boot.asm	/^sectors_rd	db	0$/;"	d
+sectors_rd	boot/loader.asm	/^sectors_rd	db	0$/;"	d
+sectors_st	boot/boot.asm	/^sectors_st	dw	0	;start sector number$/;"	d
+sectors_st	boot/loader.asm	/^sectors_st	dw	0	;start sector number$/;"	d
+sel_faltc	boot/loader.asm	/^sel_faltc	equ	GDTD_FLAT_C	- GDT_NULL$/;"	d
+sel_faltrw	boot/loader.asm	/^sel_faltrw	equ	GDTD_FLAT_RW	- GDT_NULL$/;"	d
+sel_video	boot/loader.asm	/^sel_video	equ	GDTD_VIDEO	- GDT_NULL + SA_RPL3$/;"	d
+setcolor	boot/loader.asm	/^setcolor:$/;"	l
+setcor_idx	boot/loader.asm	/^setcor_idx	dw	0		$/;"	d
+setup_paging	boot/loader.asm	/^setup_paging:$/;"	l
+shl	boot/loader.asm	/^shl	eax, 4$/;"	l
+stack_base	boot/boot.asm	/^stack_base	equ		0x7c00$/;"	d
+stack_base	boot/loader.asm	/^stack_base	equ	LOAD_OFFSET$/;"	d
+stack_space	kernel/kernel.asm	/^stack_space	resb	2048	;2K stack$/;"	l
+stage_a_start	boot/loader.asm	/^stage_a_start:$/;"	l
+strcpy	lib/klib.asm	/^strcpy:$/;"	l
+strlen	lib/klib.asm	/^strlen:$/;"	l
+times	boot/boot.asm	/^times 	510-($-$$)	db	0	$/;"	l
+type	include/kernel.h	/^	u32 type;		\/\/Memory types :$/;"	m	struct:ards
+u16	include/type.h	/^typedef unsigned short		u16;$/;"	t
+u32	include/type.h	/^typedef unsigned int		u32;$/;"	t
+u64	include/type.h	/^typedef	unsigned long long	u64;$/;"	t
+u8	include/type.h	/^typedef unsigned char		u8;$/;"	t
+va_list	include/type.h	/^typedef char *va_list;$/;"	t
+vrampos	boot/loader.asm	/^vrampos		equ	LOAD_PHY_ADDR + _vrampos$/;"	d
+vsprintf	lib/klib.c	/^int vsprintf(char *buf, char *fmt, va_list args)$/;"	f
